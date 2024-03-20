@@ -38,6 +38,7 @@ jobs:
       - name: ShellCheck lint
         if: matrix.lint == 'shellcheck'
         uses: ludeeus/action-shellcheck@2.0.0
+
       - name: shfmt lint
         if: matrix.lint == 'shfmt'
         run: |
