@@ -76,8 +76,8 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          ksu: true
-          ksu-version: main
+          ksu: false
+          ksu-version: false
           lxc: true
           lxc-patch: true
           android-version: main
