@@ -70,17 +70,19 @@ jobs:
     - name: Test CI
       uses: dabao1955/kernel_build_action@main
       with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
-          kernel-dir: msm-4.19
-          branch: taffy
-          config: cas_defconfig
+          kernel-url: https://github.com/project-poison/android_kernel_xiaomi_violet
+          kernel-dir: kernel
+          branch: 14
+          config: vendor/violet-perf_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
           ksu: true
           ksu-version: main
-          android-version: 12
-          aosp-clang-version: r383902
+          lxc: true
+          lxc-patch: true
+          android-version: main
+          aosp-clang-version: r510928
           python-27: true
           disable-lto: true
           overlayfs: true
