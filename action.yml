@@ -24,31 +24,31 @@ inputs:
   vendor-dir:
     required: false
     default: vendor
-  branch: 14
-    description: 'Branch name'
+  branch: 
+    description: '14'
     required: true
     default: main
-  config: vendor/violet-perf_defconfig
-    description: 'configuration for building android kernel'
+  config: 
+    description: 'vendor/violet-perf_defconfig'
     required: true
     default: defconfig
-  arch: arm64
+  arch: 
     required: true
     default: arm64
-  android-version: 14
-    description: 'Android version.'
+  android-version: 
+    description: '14'
     required: true
     default: 12
   apatch:
     description: 'APatch function support'
     required: false
     default: false
-  ksu: true
-    description: 'KernelSU function support'
+  ksu: 
+    description: 'true'
     required: true
-    default: false
-  ksu-version: main
-    description: 'KernelSU default branch'
+    default: true
+  ksu-version: 
+    description: 'main'
     required: true
     default: "main"
   ksu-lkm:
@@ -56,19 +56,19 @@ inputs:
     required: false
     default: false
   overlayfs:
-    description: 'Enable Overlayfs for ksu'
+    description: 'true'
     required: true
     default: false
   disable-lto:
     description: 'Disable LTO configs for configs.'
     required: false
     default: false
-  lxc: true
-    description: 'Enable lxc and docker configs for configs.'
+  lxc: 
+    description: 'true'
     required: true
     default: true
-  lxc-patch: true
-    description: 'Apply lxc patch aviod not booting'
+  lxc-patch: 
+    description: 'true'
     required: true
     default: true
   nethunter:
@@ -95,9 +95,9 @@ inputs:
     description: 'Use clang from aosp project.'
     required: true
     default: true
-  aosp-clang-version: r510928
+  aosp-clang-version: 
     required: true
-    default: "r383902"
+    default: "r510928"
   other-clang-url:
     required: false
     default: ''
@@ -117,9 +117,9 @@ inputs:
     required: false
     default: false
   anykernel3:
-    description: 'Package kernel use anykernel3.'
+    description: 'true'
     required: true
-    default: false
+    default: true
   bootimg-url:
     description: "boot.img path"
     required: false
