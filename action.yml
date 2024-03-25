@@ -6,7 +6,7 @@ branding:
   color: 'blue'
 
 inputs:
-  kernel-url:
+  kernel-url: https://github.com/project-poison/android_kernel_xiaomi_violet
     description: 'Kernel Source Url'
     required: true
   depth:
@@ -24,18 +24,18 @@ inputs:
   vendor-dir:
     required: false
     default: vendor
-  branch:
+  branch: 14
     description: 'Branch name'
-    required: false
+    required: true
     default: main
-  config:
+  config: vendor/violet-perf_defconfig
     description: 'configuration for building android kernel'
     required: true
     default: defconfig
-  arch:
+  arch: arm64
     required: true
     default: arm64
-  android-version:
+  android-version: 14
     description: 'Android version.'
     required: true
     default: 12
@@ -43,13 +43,13 @@ inputs:
     description: 'APatch function support'
     required: false
     default: false
-  ksu:
+  ksu: true
     description: 'KernelSU function support'
-    required: false
+    required: true
     default: false
-  ksu-version:
+  ksu-version: main
     description: 'KernelSU default branch'
-    required: false
+    required: true
     default: "main"
   ksu-lkm:
     description: "Build KernelSU as a linux kernel module"
@@ -57,20 +57,20 @@ inputs:
     default: false
   overlayfs:
     description: 'Enable Overlayfs for ksu'
-    required: false
+    required: true
     default: false
   disable-lto:
     description: 'Disable LTO configs for configs.'
     required: false
     default: false
-  lxc:
+  lxc: true
     description: 'Enable lxc and docker configs for configs.'
-    required: false
-    default: false
-  lxc-patch:
+    required: true
+    default: true
+  lxc-patch: true
     description: 'Apply lxc patch aviod not booting'
-    required: false
-    default: false
+    required: true
+    default: true
   nethunter:
     description: 'Enable Kali nethunter'
     required: false
@@ -93,10 +93,10 @@ inputs:
     default: true
   aosp-clang:
     description: 'Use clang from aosp project.'
-    required: false
-    default: false
-  aosp-clang-version:
-    required: false
+    required: true
+    default: true
+  aosp-clang-version: r510928
+    required: true
     default: "r383902"
   other-clang-url:
     required: false
@@ -118,7 +118,7 @@ inputs:
     default: false
   anykernel3:
     description: 'Package kernel use anykernel3.'
-    required: false
+    required: true
     default: false
   bootimg-url:
     description: "boot.img path"
