@@ -6,8 +6,8 @@ branding:
   color: 'blue'
 
 inputs:
-  kernel-url: "https://github.com/project-poison/android_kernel_xiaomi_violet"
-    description: 'Kernel Source Url'
+  kernel-url: 
+    description: 'https://github.com/project-poison/android_kernel_xiaomi_violet'
     required: true
   depth:
     required: false
